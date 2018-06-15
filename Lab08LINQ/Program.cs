@@ -24,6 +24,11 @@ namespace Lab08LINQ
             LambdaStyle(deserialized);
 
         }
+        /// <summary>
+        /// Method takes in a deserialized json file and uses a LINQ
+        /// expression to display all of the Neighborhood names
+        /// </summary>
+        /// <param name="obj">Deserialized json object</param>
         static void PrintAllNeighborhoods(FeatureCollection obj)
         {
             Console.Clear();
@@ -36,8 +41,15 @@ namespace Lab08LINQ
             }
             Console.WriteLine("----");
             Console.WriteLine("All the data from json object");
+            Console.WriteLine("Press enter to continue...");
             Console.ReadLine();
         }
+        /// <summary>
+        /// Method takes in a deserialized json file and uses a LINQ
+        /// expression to display all of the Neighborhood names that are
+        /// not empty strings
+        /// </summary>
+        /// <param name="obj">Deserialized json object</param>
         static void FilterEmptyNeighborhoodNames(FeatureCollection obj)
         {
             Console.Clear();
@@ -51,8 +63,16 @@ namespace Lab08LINQ
             }
             Console.WriteLine("----");
             Console.WriteLine("Removed Blank Names");
+            Console.WriteLine("Press enter to continue...");
             Console.ReadLine();
         }
+        /// <summary>
+        /// Method takes in a deserialized json file and uses a LINQ
+        /// expression to retreive all of the Neighborhood names that are
+        /// not empty strings. Then uses a second LINQ expression to filter
+        /// all duplicate names
+        /// </summary>
+        /// <param name="obj">Deserialized json object</param>
         static void RemoveDuplicateNames(FeatureCollection obj)
         {
             Console.Clear();
@@ -67,8 +87,15 @@ namespace Lab08LINQ
             }
             Console.WriteLine("----");
             Console.WriteLine("Filtered Duplicated Names");
+            Console.WriteLine("Press enter to continue...");
             Console.ReadLine();
         }
+        /// <summary>
+        /// Method that combines all three previous LINQ methods into one
+        /// expression that retrieves all Neighborhood names that are not
+        /// empty strings and not duplicate
+        /// </summary>
+        /// <param name="obj">Deserialized json object</param>
         static void OneBigLINQ(FeatureCollection obj)
         {
             Console.Clear();
@@ -85,8 +112,15 @@ namespace Lab08LINQ
             }
             Console.WriteLine("----");
             Console.WriteLine("ONE BIG LINQ CALL");
+            Console.WriteLine("Press enter to continue...");
             Console.ReadLine();
         }
+        /// <summary>
+        /// Method that is a Lambda expression of the single large LINQ
+        /// expression. This Lambda expression retrieves all the Neighborhood names
+        /// that are not empty strings and not duplicate
+        /// </summary>
+        /// <param name="obj">Deserialized json object</param>
         static void LambdaStyle(FeatureCollection obj)
         {
             Console.Clear();
@@ -100,7 +134,6 @@ namespace Lab08LINQ
             }
             Console.WriteLine("----");
             Console.WriteLine("Lambda Expresssion");
-            Console.ReadLine();
         }
     }
 }
